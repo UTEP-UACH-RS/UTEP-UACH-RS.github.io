@@ -13,8 +13,7 @@ nav a:hover{color:var(--green)}
 /*.hero h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.1;margin:0 0 16px;color:#fff}
 .hero p{max-width:780px;font-size:1.15rem}*/
 .hero h1,
-.hero p {
-  text-shadow: 0 2px 5px rgba(0,0,0,.65);
+.hero p{text-shadow: 0 2px 5px rgba(0,0,0,.65);
 .btn{display:inline-block;padding:11px 18px;border-radius:6px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;margin-top:12px}
 .section{padding:64px 0}
 .section.alt{background:var(--light)}
