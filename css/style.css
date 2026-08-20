@@ -364,7 +364,7 @@ footer{
 .about-equipment{
   width:500px;
   max-width:100%;
-  margin:20px 0 30px;
+  margin:20px auto 30px;
 }
 
 .about-equipment img{
