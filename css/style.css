@@ -362,22 +362,21 @@ footer{
 }
 
 .about-equipment{
-  margin:0;
+  margin:20px 0 28px;
+  max-width:700px;
 }
 
 .about-equipment img{
   width:100%;
-  height:320px;
-  object-fit:cover;
-  border-radius:10px;
+  height:auto;
   display:block;
+  border-radius:8px;
 }
 
 .about-equipment figcaption{
-  margin-top:8px;
+  margin-top:6px;
   font-size:.9rem;
-  color:var(--muted);
-  line-height:1.4;
+  color:#5F6B7A;
 }
 
 @media(max-width:850px){
