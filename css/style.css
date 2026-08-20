@@ -391,12 +391,60 @@ footer{
 }
 
 
+/* =========================
+   TEAM PAGE
+   ========================= */
 
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  margin:24px 0 45px;
+}
 
+.team-card{
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  background:#fff;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
 
+.team-card img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  margin:0 auto 16px;
+}
 
+.team-card h3{
+  margin:8px 0 4px;
+  color:var(--blue);
+}
 
+.team-title{
+  font-weight:600;
+  margin:0;
+}
 
+.team-institution{
+  color:var(--muted);
+  margin:2px 0 12px;
+}
 
+.team-card p{
+  line-height:1.5;
+}
+
+@media(max-width:850px){
+
+  .team-grid{
+    grid-template-columns:1fr;
+  }
+
+}
 
 
