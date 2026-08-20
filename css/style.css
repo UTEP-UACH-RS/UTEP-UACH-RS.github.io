@@ -350,3 +350,55 @@ footer{
   display:block;
 }
 
+
+/* About page introduction */
+
+.about-intro{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:40px;
+  align-items:center;
+  margin-bottom:45px;
+}
+
+.about-equipment{
+  margin:0;
+}
+
+.about-equipment img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+}
+
+.about-equipment figcaption{
+  margin-top:8px;
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+@media(max-width:850px){
+
+  .about-intro{
+    grid-template-columns:1fr;
+  }
+
+  .about-equipment img{
+    height:auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
