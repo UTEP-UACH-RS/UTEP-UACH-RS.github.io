@@ -633,3 +633,25 @@ footer{
 
 }
 
+
+.study-map {
+  max-width: 850px;
+  margin: 25px auto;
+}
+
+.study-map iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  display: block;
+}
+
+.study-map figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #5F6B7A;
+  text-align: left;
+}
+
+
