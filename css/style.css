@@ -638,13 +638,11 @@ footer{
    STUDY AREA PAGE
    ===================================================== */
 
-/* Make the Study Area page slightly wider than normal content pages */
 .content-page.study-area-page{
-  width:min(1120px, calc(100% - 40px));
+  width:min(960px, calc(100% - 40px));
   margin:0 auto;
   padding:56px 0 80px;
 }
-
 
 /* -----------------------------------------------------
    STUDY SITES
@@ -672,7 +670,7 @@ footer{
 
 .study-map{
   width:100%;
-  max-width:1050px;
+  max-width:960px;
   margin:20px auto 0;
   padding:0;
 }
