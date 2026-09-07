@@ -634,99 +634,143 @@ footer{
 }
 
 
-.study-map {
-  max-width: 850px;
-  margin: 25px auto;
+
+/* =========================
+   STUDY AREA PAGE
+   ========================= */
+
+.study-area{
+  max-width:1100px;
+  margin:0 auto;
+  padding:40px 24px 60px;
 }
 
-.study-map iframe {
-  width: 100%;
-  height: 450px;
-  border: 0;
-  display: block;
+
+/* Main page title */
+.study-area h1{
+  color:var(--blue);
+  margin-top:0;
+  margin-bottom:18px;
+  font-size:2rem;
 }
 
-.study-map figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #5F6B7A;
-  text-align: left;
+
+/* Introductory paragraph */
+.study-area > p{
+  max-width:900px;
+  margin-bottom:40px;
 }
 
+
+/* =========================
+   STUDY SITES SECTION
+   ========================= */
 
 .site-overview{
-  max-width:1180px;
-  margin:50px auto;
-  padding:0 24px;
+  max-width:1000px;
+  margin:0 auto;
+  padding:0;
 }
 
+.site-overview h2{
+  color:var(--blue);
+  margin-bottom:14px;
+}
+
+.site-overview p{
+  max-width:900px;
+  margin-bottom:22px;
+}
+
+
+/* =========================
+   STUDY SITES FIGURE
+   ========================= */
+
 .study-map{
-  margin-top:25px;
+  width:100%;
+  max-width:1000px;
+  margin:20px auto 0;
+  padding:0;
 }
 
 .study-map img{
+  display:block;
   width:100%;
-  max-height:600px;
-  object-fit:contain;
-  border-radius:10px;
+  height:auto;
+  max-width:100%;
+  margin:0 auto;
+  border-radius:8px;
   box-shadow:0 3px 12px rgba(0,0,0,0.12);
-} 
+}
 
+.study-map figcaption{
+  margin-top:12px;
+  font-size:0.9rem;
+  line-height:1.5;
+  color:var(--text);
+  text-align:center;
+}
+
+
+/* =========================
+   OPTIONAL SITE CARDS
+   ========================= */
 
 .site-grid{
-  max-width:1180px;
-  margin:40px auto 70px;
-  padding:0 24px;
+  max-width:1000px;
+  margin:40px auto 0;
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:28px;
 }
 
 .site-card{
+  background:#fff;
   border:1px solid #e5e7eb;
   border-radius:10px;
   padding:18px;
-  background:#fff;
   box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
 
 .site-card img{
   width:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
+  height:auto;
+  display:block;
   border-radius:7px;
 }
 
 .site-card h3{
   color:var(--blue);
   margin-top:14px;
+  margin-bottom:8px;
 }
 
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media(max-width:800px){
+
+  .study-area{
+    padding:30px 18px 50px;
+  }
+
+  .site-overview{
+    max-width:100%;
+  }
+
+  .study-map{
+    max-width:100%;
+  }
+
   .site-grid{
     grid-template-columns:1fr;
   }
+
 }
 
-.study-map{
-  width:120%;
-  margin:25px -10%;
-  text-align:center;
-}
-
-.study-map img{
-  width:100%;
-  height:auto;
-}
-
-.study-map figcaption{
-  margin-top:10px;
-  font-size:0.9rem;
-  color:var(--muted);
-  line-height:1.5;
-  text-align:left;
-}
 
 
 
