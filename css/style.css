@@ -634,62 +634,45 @@ footer{
 }
 
 
-
-/* =========================
+/* =====================================================
    STUDY AREA PAGE
-   ========================= */
+   ===================================================== */
 
-.study-area{
-  max-width:1100px;
+/* Make the Study Area page slightly wider than normal content pages */
+.content-page.study-area-page{
+  width:min(1120px, calc(100% - 40px));
   margin:0 auto;
-  padding:40px 24px 60px;
+  padding:56px 0 80px;
 }
 
 
-/* Main page title */
-.study-area h1{
-  color:var(--blue);
-  margin-top:0;
-  margin-bottom:18px;
-  font-size:2rem;
-}
-
-
-/* Introductory paragraph */
-.study-area > p{
-  max-width:900px;
-  margin-bottom:40px;
-}
-
-
-/* =========================
-   STUDY SITES SECTION
-   ========================= */
+/* -----------------------------------------------------
+   STUDY SITES
+   ----------------------------------------------------- */
 
 .site-overview{
-  max-width:1000px;
-  margin:0 auto;
-  padding:0;
+  width:100%;
+  margin:40px 0 0;
 }
 
 .site-overview h2{
   color:var(--blue);
-  margin-bottom:14px;
+  margin:0 0 16px;
 }
 
-.site-overview p{
-  max-width:900px;
-  margin-bottom:22px;
+.site-overview > p{
+  margin:0 0 24px;
+  max-width:1000px;
 }
 
 
-/* =========================
+/* -----------------------------------------------------
    STUDY SITES FIGURE
-   ========================= */
+   ----------------------------------------------------- */
 
 .study-map{
   width:100%;
-  max-width:1000px;
+  max-width:1050px;
   margin:20px auto 0;
   padding:0;
 }
@@ -698,78 +681,39 @@ footer{
   display:block;
   width:100%;
   height:auto;
-  max-width:100%;
-  margin:0 auto;
+  margin:0;
   border-radius:8px;
   box-shadow:0 3px 12px rgba(0,0,0,0.12);
 }
 
 .study-map figcaption{
-  margin-top:12px;
+  margin-top:10px;
   font-size:0.9rem;
   line-height:1.5;
-  color:var(--text);
-  text-align:center;
+  color:var(--muted);
+  text-align:left;
 }
 
 
-/* =========================
-   OPTIONAL SITE CARDS
-   ========================= */
-
-.site-grid{
-  max-width:1000px;
-  margin:40px auto 0;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:28px;
-}
-
-.site-card{
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:10px;
-  padding:18px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
-}
-
-.site-card img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:7px;
-}
-
-.site-card h3{
-  color:var(--blue);
-  margin-top:14px;
-  margin-bottom:8px;
-}
-
-
-/* =========================
+/* -----------------------------------------------------
    RESPONSIVE
-   ========================= */
+   ----------------------------------------------------- */
 
 @media(max-width:800px){
 
-  .study-area{
-    padding:30px 18px 50px;
-  }
-
-  .site-overview{
-    max-width:100%;
+  .content-page.study-area-page{
+    width:calc(100% - 32px);
+    padding:40px 0 60px;
   }
 
   .study-map{
+    width:100%;
     max-width:100%;
   }
 
-  .site-grid{
-    grid-template-columns:1fr;
-  }
-
 }
+
+
 
 
 
