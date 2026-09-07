@@ -654,7 +654,7 @@ footer{
   text-align: left;
 }
 
-/*
+
 .site-overview{
   max-width:1180px;
   margin:50px auto;
@@ -671,26 +671,8 @@ footer{
   object-fit:contain;
   border-radius:10px;
   box-shadow:0 3px 12px rgba(0,0,0,0.12);
-} */
+} 
 
-
-.site-overview{
-  max-width:1400px;     /* increase from 1180px */
-  margin:50px auto;
-  padding:0 24px;
-}
-
-.study-map{
-  width:100%;
-  margin:25px auto;
-}
-
-.study-map img{
-  width:100%;
-  height:auto;
-  max-height:none;      /* remove the 600px restriction */
-  display:block;
-}
 
 .site-grid{
   max-width:1180px;
