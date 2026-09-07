@@ -655,3 +655,58 @@ footer{
 }
 
 
+.site-overview{
+  max-width:1180px;
+  margin:50px auto;
+  padding:0 24px;
+}
+
+.study-map{
+  margin-top:25px;
+}
+
+.study-map img{
+  width:100%;
+  max-height:600px;
+  object-fit:contain;
+  border-radius:10px;
+  box-shadow:0 3px 12px rgba(0,0,0,0.12);
+}
+
+.site-grid{
+  max-width:1180px;
+  margin:40px auto 70px;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+}
+
+.site-card{
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  padding:18px;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.site-card img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:7px;
+}
+
+.site-card h3{
+  color:var(--blue);
+  margin-top:14px;
+}
+
+@media(max-width:800px){
+  .site-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+
