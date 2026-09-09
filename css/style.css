@@ -107,7 +107,7 @@ nav a.active{
   display:flex;
   align-items:center;
   background:
-    url('../images/banner.jpg') center 55% / cover no-repeat;
+    url('../images/banner.png') center 55% / cover no-repeat;
   color:#fff;
 }
 
