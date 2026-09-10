@@ -711,7 +711,30 @@ footer{
 
 }
 
+/* -----------------------------------------------------
+   RESEARCH FIGURES
+   ----------------------------------------------------- */
 
+.research-figure {
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.research-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.research-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #5f6b7a;
+  line-height: 1.5;
+}
 
 
 
