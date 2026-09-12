@@ -743,7 +743,6 @@ footer{
 
 .textbook-container {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   gap: 40px;
   margin-top: 20px;
@@ -751,51 +750,70 @@ footer{
 }
 
 .textbook-image {
-  flex: 0 0 260px;
+  flex: 0 0 220px;
 }
 
 .textbook-image img {
-  width: 260px;
+  width: 220px;
+  max-width: 100%;
   height: auto;
   display: block;
 }
 
 .textbook-info {
   flex: 1;
-  max-width: 650px;
+  min-width: 0;
 }
 
 .textbook-info h3 {
   margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.textbook-info p {
-  margin-top: 0;
-  margin-bottom: 20px;
 }
 
 .figure-caption {
-  width: 260px;
+  width: 220px;
+  max-width: 100%;
   margin-top: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.4;
-  color: #5F6B7A;
 }
 
-/* Mobile layout */
+
+/* =========================
+   MOBILE PHONE LAYOUT
+   ========================= */
+
 @media (max-width: 700px) {
 
   .textbook-container {
     flex-direction: column;
+    gap: 20px;
   }
 
   .textbook-image {
     flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .textbook-image img {
+    width: 180px;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .figure-caption {
+    width: 100%;
+    max-width: 300px;
+    margin: 8px auto 0;
+    text-align: center;
   }
 
   .textbook-info {
-    max-width: 100%;
+    width: 100%;
   }
-}
 
+  .textbook-info h3 {
+    font-size: 1.2rem;
+  }
+
+}
