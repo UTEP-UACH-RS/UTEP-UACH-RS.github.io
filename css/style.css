@@ -737,8 +737,53 @@ footer{
 }
 
 
+/* =========================
+   SUGGESTED TEXTBOOK
+   ========================= */
 
+.textbook-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 25px;
+}
 
+.textbook-image {
+  flex: 0 0 260px;
+}
+
+.textbook-image img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+}
+
+.textbook-info {
+  flex: 1;
+}
+
+.textbook-info h3 {
+  margin-top: 0;
+}
+
+.figure-caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #5F6B7A;
+}
+
+/* Stack the textbook information on smaller screens */
+@media (max-width: 700px) {
+  .textbook-container {
+    flex-direction: column;
+  }
+
+  .textbook-image {
+    flex: none;
+    width: 220px;
+  }
+}
 
 
 
