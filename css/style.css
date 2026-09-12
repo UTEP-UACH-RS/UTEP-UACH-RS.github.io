@@ -738,14 +738,16 @@ footer{
 
 
 /* =========================
-   SUGGESTED TEXTBOOK
+   TEXTBOOK SECTION
    ========================= */
 
 .textbook-container {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   gap: 40px;
-  margin-top: 25px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .textbook-image {
@@ -753,38 +755,47 @@ footer{
 }
 
 .textbook-image img {
-  width: 100%;
-  max-width: 260px;
+  width: 260px;
   height: auto;
   display: block;
 }
 
 .textbook-info {
   flex: 1;
+  max-width: 650px;
 }
 
 .textbook-info h3 {
   margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.textbook-info p {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .figure-caption {
-  margin-top: 10px;
+  width: 260px;
+  margin-top: 8px;
   font-size: 0.9rem;
+  line-height: 1.4;
   color: #5F6B7A;
 }
 
-/* Stack the textbook information on smaller screens */
+/* Mobile layout */
 @media (max-width: 700px) {
+
   .textbook-container {
     flex-direction: column;
   }
 
   .textbook-image {
     flex: none;
-    width: 220px;
+  }
+
+  .textbook-info {
+    max-width: 100%;
   }
 }
-
-
-
 
