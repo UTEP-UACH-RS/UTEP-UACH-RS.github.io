@@ -750,11 +750,11 @@ footer{
 }
 
 .textbook-image {
-  flex: 0 0 220px;
+  flex: 0 0 280px;
 }
 
 .textbook-image img {
-  width: 220px;
+  width: 280px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -770,7 +770,7 @@ footer{
 }
 
 .figure-caption {
-  width: 220px;
+  width: 280px;
   max-width: 100%;
   margin-top: 8px;
   font-size: 0.85rem;
@@ -796,7 +796,7 @@ footer{
   }
 
   .textbook-image img {
-    width: 180px;
+    width: 220px;
     max-width: 75%;
     margin: 0 auto;
   }
