@@ -863,3 +863,54 @@ footer{
 
 }
 
+
+/* =========================
+   SPONSOR LOGOS
+   ========================= */
+
+.sponsors {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 50px;
+  max-width: 700px;
+  margin: 30px auto;
+  align-items: center;
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+.logo-item img {
+  max-width: 220px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Cellphone */
+@media (max-width: 600px) {
+  .logo-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .logo-item img {
+    max-width: 200px;
+    max-height: 90px;
+  }
+}
+
+
+
+
+
