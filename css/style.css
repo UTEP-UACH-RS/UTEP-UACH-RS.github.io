@@ -911,6 +911,50 @@ footer{
 }
 
 
+/* =========================
+   UAV RGB / ExG COMPARISON
+   ========================= */
+
+.image-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 25px auto 10px;
+  align-items: start;
+}
+
+.image-comparison figure {
+  margin: 0;
+  text-align: center;
+}
+
+.image-comparison img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+.image-comparison figcaption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.figure-caption {
+  max-width: 1000px;
+  margin: 15px auto 30px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Stack images on smaller screens */
+@media (max-width: 700px) {
+  .image-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
