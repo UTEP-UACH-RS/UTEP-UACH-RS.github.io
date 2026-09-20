@@ -942,8 +942,9 @@ footer{
 }
 
 .figure-caption {
-  max-width: 1000px;
-  margin: 15px auto 30px;
+  width: 100%;
+  max-width: none;
+  margin: 18px auto 35px;
   text-align: center;
   font-size: 0.95rem;
 }
