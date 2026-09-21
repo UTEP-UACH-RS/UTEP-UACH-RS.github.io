@@ -8,6 +8,59 @@
   
 <section class="research-section">
 
+<h2>Satellite Remote Sensing</h2>
+
+  <p>
+    Satellite imagery is used to provide low spatial resolution observations of the study area. The imagery is processed to generate
+    vegetation indices such as the Normalize Vegetation Index (NDVI) and Normalized Difference Water Index (NDWI). These indices is useful
+    for identifying and evaluating green vegetation using standard multispectra imagery.
+  </p>
+
+  <figure class="research-figure">
+    <img src="images/Satellite_pipeline.jpg"
+         alt="Satellite image processing pipeline for computing the NDVI and NDWI">
+
+    <figcaption>
+       <strong>Fig. 1.</strong>Satellite image processing pipeline used to generate the Vegetation Indices (VIs).
+    </figcaption>
+  </figure>
+
+  <h3>Satellite Image Processing Results</h3>
+
+  <p>
+    The original imagery was processed to calculate the VIs. The VI images enhance green vegetation and water content and facilitates
+    comparison of vegetation conditions within a regional study area.
+  </p>
+
+  <div class="image-comparison">
+
+    <figure>
+      <img src="images/Satellite_rgb.png"
+           alt="Original Satellite RGB image of the agricultural study areas">
+
+      <figcaption>
+        (a) Original Satellite RGB image.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/Satellite_ndvi.png"
+           alt="NDVI and NDWI images derived from the satellites multispectral images">
+
+      <figcaption>
+        (b) NDVI and NDWI images computed from multispectral iamges.
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <p class="figure-caption">
+    <strong>Fig. 2.</strong> Comparison of (a) the original Satellite RGB image and (b) NDVI and NDWI image of the area taken
+    on July 9th, 2026. Image processing was performed using Python.
+  </p>
+
+  <!-- ========================================================================= -->
+  
   <h2>UAV Remote Sensing</h2>
 
   <p>
@@ -24,9 +77,6 @@
        <strong>Fig. 1.</strong>UAV image processing pipeline used to generate the Excess Green Index (ExG).
     </figcaption>
   </figure>
-
-
-  <!-- UAV RGB and ExG Results -->
 
   <h3>UAV Image Processing Results</h3>
 
@@ -59,7 +109,7 @@
   </div>
 
   <p class="figure-caption">
-    <strong>Fig. 2.</strong> Comparison of (a) the original UAV RGB image and (b) Excess Green Index (ExG) image of images taken
+    <strong>Fig. 2.</strong> Comparison of (a) the original UAV RGB image and (b) Excess Green Index (ExG) images taken
     on July 9th, 2026. Due to camera mounting configuration, the RGB image was taken at an off-nadir angle. Image processing was
     performed using ENVI® 5.6.
   </p>
