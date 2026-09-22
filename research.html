@@ -8,6 +8,9 @@
   
 <section class="research-section">
 
+<!-- ================  SATELLITE INFORMATION ========================================================= -->
+  
+  
 <h2>Satellite Remote Sensing</h2>
 
   <p>
@@ -59,12 +62,12 @@
     on July 9th, 2026. Image processing was performed using Python.
   </p>
 
-  <!-- ========================================================================= -->
+  <!-- ================  UAV INFORMATION  ========================================================= -->
   
   <h2>UAV Remote Sensing</h2>
 
   <p>
-    UAV RGB imagery is used to provide very high spatial resolution observations of the study area. The imagery is processed to generate
+    UAV RGB imagery is used to provide high spatial resolution observations of the study area. The imagery is processed to generate
     vegetation indices such as the Excess Green Index (ExG). ExG is useful for identifying and evaluating green vegetation using
     standard RGB imagery.
   </p>
@@ -112,6 +115,62 @@
     <strong>Fig. 2.</strong> Comparison of (a) the original UAV RGB image and (b) Excess Green Index (ExG) images taken
     on July 9th, 2026. Due to camera mounting configuration, the RGB image was taken at an off-nadir angle. Image processing was
     performed using ENVI® 5.6.
+  </p>
+
+  
+<!-- ==================  HYPERSPECTRAL CAMERA ======================================================= -->
+  
+  <h2>Ground-based Remote Sensing</h2>
+
+  <p>
+    Hyperspectral imagery is acquired to obtain very detailed full spectral information about vegetaion, soil, and other meterials
+    within a very small area.  A hyperspectral sensor measures reflected energy in many narrow continuous wavelneght bands. These
+    measurements provide data for calculating several vegetation indices, including the NDVI, and can be used to investigate plant
+    vigor and biomass at the individual plant level.
+  </p>
+
+  <figure class="research-figure">
+    <img src="images/Camera_pipeline.jpg"
+         alt="Camera image processing pipeline for computing the VIs">
+
+    <figcaption>
+       <strong>Fig. 1.</strong>Hyperspectral image processing pipeline used to generate VIs.
+    </figcaption>
+  </figure>
+
+  <h3>Hyperspectral Image Processing Results</h3>
+
+  <p>
+    The hyperspectral imagery was processed to calculate the reflectance and can be used to calculate several VIs,
+    including Normalized Difference Vegetation Index (NDVI),Normalized Difference Red Edge Index (NDRE)
+    and Photochemical Reflectance Index (PRI)
+  </p>
+
+  <div class="image-comparison">
+
+    <figure>
+      <img src="images/Camera_rgb.png"
+           alt="Original hyperspectral RGB image of the study area">
+
+      <figcaption>
+        (a) Original hyperspectral RGB image.
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/Camera_ndvi.png"
+           alt="NDVI image derived from the hyperspectral image">
+
+      <figcaption>
+        (b) NDVI and PRI VIs.
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <p class="figure-caption">
+    <strong>Fig. 2.</strong> Comparison of (a) the original hyperspectral RGB image and (b) NDVI and PRI images taken
+    on July 9th, 2026. Image processing was performed using ENVI® 5.6.
   </p>
 
   
