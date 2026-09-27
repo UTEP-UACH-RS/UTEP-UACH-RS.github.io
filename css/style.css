@@ -963,5 +963,48 @@ footer{
 }
 
 
+/* =========================
+   LABORATORIES
+   ========================= */
 
+.education-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.lab-card {
+  background: #f6f8fa;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.lab-card h2 {
+  margin-top: 0;
+  color: var(--blue);
+}
+
+.lab-card a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.lab-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.lab-button:hover,
+.lab-button:focus {
+  text-decoration: underline;
+}
 
