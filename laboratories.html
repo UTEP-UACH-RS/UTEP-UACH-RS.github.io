@@ -58,10 +58,11 @@
     </p>
 
     <p><strong>Activities:</strong></p>
-    <p>1. Download a Sentinel-2 L2A scene (10 m, free via Copernicus) and a PlanetScope Surface Reflectance scene (3 m) of the same site
-          from dates as close together as possible (you will need to create a free account on the Copernicus or Planet portal).</p>
-    <p>2. Identify the Red and Near Infra Red (NIR) bands in each product, noting that each sensor stores its bands in a different order,
-          and calculate Normalized Difference Vegetation Index (NDVI) for low- and higher-spatial resolution images.</p>
+    <p>1. Download a Sentinel-2 L2A scene (10 m/pixel, free via Copernicus) and a PlanetScope Surface Reflectance scene (3 m/pixel) of
+          the same site from dates as close together as possible (you will need to create a free account on the Copernicus or
+          Planet portal).</p>
+    <p>2. Identify the Red and Near Infra Red (NIR) bands in each product, noting that each sensor stores its bands in a different
+          order, and calculate Normalized Difference Vegetation Index (NDVI) for low- and higher-spatial resolution images.</p>
     <p>3. Produce side-by-side NDVI maps with legends and compare the mean NDVI and the level of field detail visible in each.</p>
     <p>4. Discuss the trade-offs between free, coarser imagery and commercial, finer imagery, and how each would compare with a
           ground-based image collected at the same site.</p>
@@ -77,13 +78,29 @@
 
   <div class="lab-card">
 
-    <h2>Laboratory 2: Vegetation Analysis Using NDVI</h2>
+    <h2>Laboratory 2: Crop and Soil Monitoring with NAIP Imagery</h2>
 
     <p>
-      Calculate the Normalized Difference Vegetation Index (NDVI) using Sentinel-2 imagery and investigate vegetation conditions within
-      the study area.
+      Objective: Students analyze spectrum of crops and soil and calculate vegetation indices from National Agricultural
+      Imagery Program (NAIP) imagery (0.6 m/pixel) and compare to low spatial resolutions over the same agricultural
+      site.  Students assess how resolution affects crop and soil areas.
     </p>
 
+    <p><strong>Activities:</strong></p>
+    <p>1. Download a NAIP scene (0.6m /pixel, free via USGS EarthExplorer) of sites of interest around Sun Gro Facility,
+          Mesilla Park, NM (you will need to create a free account on the USGS portal).</p>
+    <p>2. Identify all the bands available, noting that these may be different from Sentinel 2 bands.  Calculate
+          vegetation indices for these higher-spatial resolution images.</p>
+    <p>3. Produce side-by-side vegetation maps with legends and compare the mean values at the level of field detail
+          visible in each.</p>
+    <p>4. Discuss the trade-offs between from NAIP and Sentinel imagery, and how each would compare with a
+          ground-based image collected at the same site.</p>
+    
+    <p><strong>Deliverables:</strong></p>
+    <p>Side-by-side vegetation maps, a comparison table of statistics, and a short report on the trade-offs.</p>
+    <p><strong>Tools:</strong></p>
+    <p>USGS EarthExplorer, and Python/ENVI/MATLAB, with instructions that can be shared between UTEP
+       and UACH students. Estimated time: one 3-hour session.</p>    
     
   </div>
 
