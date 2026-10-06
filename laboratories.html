@@ -53,14 +53,13 @@
     <h2>Laboratory 1: Comparison of Satellite Resolutions for Crop Monitoring</h2>
 
     <p>
-      Objective: Students compare vegetation indices from two satellites with different spatial resolutions over the same agricultural
-      site in the border region (Sun Gro Facility, Mesilla Park, NM), and evaluate how resolution affects what can be observed.
+      Objective: Students compare vegetation indices from two satellites with different spatial resolutions over the
+      same agricultural site and evaluate how resolution affects what can be observed.
     </p>
 
     <p><strong>Activities:</strong></p>
     <p>1. Download a Sentinel-2 L2A scene (10 m/pixel, free via Copernicus) and a PlanetScope Surface Reflectance scene (3 m/pixel) of
-          the same site from dates as close together as possible (you will need to create a free account on the Copernicus or
-          Planet portal).</p>
+          the same site from dates as close together as possible.</p>
     <p>2. Identify the Red and Near Infra Red (NIR) bands in each product, noting that each sensor stores its bands in a different
           order, and calculate Normalized Difference Vegetation Index (NDVI) for low- and higher-spatial resolution images.</p>
     <p>3. Produce side-by-side NDVI maps with legends and compare the mean NDVI and the level of field detail visible in each.</p>
@@ -82,13 +81,13 @@
 
     <p>
       Objective: Students analyze spectrum of crops and soil and calculate vegetation indices from National Agricultural
-      Imagery Program (NAIP) imagery (0.6 m/pixel) and compare to low spatial resolutions over the same agricultural
-      site.  Students assess how resolution affects crop and soil areas.
+      Imagery Program (NAIP) imagery (0.6 m/pixel) and compare to satellite imagery.  Students assess how resolution
+      affects crop and soil areas.
     </p>
 
     <p><strong>Activities:</strong></p>
     <p>1. Download a NAIP scene (0.6m /pixel, free via USGS EarthExplorer) of sites of interest around Sun Gro Facility,
-          Mesilla Park, NM (you will need to create a free account on the USGS portal).</p>
+          Mesilla Park, NM.</p>
     <p>2. Identify all the bands available, noting that these may be different from Sentinel 2 bands.  Calculate
           vegetation indices for these higher-spatial resolution images.</p>
     <p>3. Produce side-by-side vegetation maps with legends and compare the mean values at the level of field detail
@@ -107,22 +106,55 @@
 
   <div class="lab-card">
 
-    <h2>Laboratory 3: Calculation of Reflectance Imagery from Hyperspectral Data Cubes</h2>
+    <h2>Laboratory 3: Classification of satellite/aerial imagery.</h2>
 
     <p>
-      Objective: Calculate reflectance values of hyperspectral imagery, and investigate spectral properties of the vegetation and the soil.
+      Objective: Students will use multispectral satellite and aerial imagery to explore the effects of classification on 
+      agricultural fields.
     </p>
 
     <p><strong>Activities:</strong></p>
-    <p>1. Download a hyperspectral scene (0.2 mm/pixel, free this Website). You will need to contact the webmaster to get access to the data).</p>
-    <p>2. Identify the following hyperspectral data cubes on the data repository: (a) scene cube, (b) the bright field, and (c) dark field, and download them into your computer.</p>
+    <p>1. Download the multispectral satellite scene (Sentinel2 3 m/pixel or 10 m/pixel) and an aerial multispectral scene (0.6 m/pixel)
+          and identify the available bands.</p>
+    <p>2. Calculate vegetation indices and determine which ones provide distinct information in each case.</p>
+    <p>3. Use selected spectral bands and/or vegetation indices as input to the K-means clustering algorithms and produce
+          vegetation/soil maps.</p>
+    <p>4. Test different number of clusters and determine which provides enough detail to distinguish vegetation conditions
+          without making the map difficult to interpret.</p>
+    <p>5. Compare the resulting maps and discuss which cluster settings are most useful for separating vegetaion, soil, and 
+          differences within vegetation.</p>
+
+    <p><strong>Deliverables:</strong></p>
+    <p>Vegetation-index maps and comparisons describing which bands, indices, and number of clusters provide the clearest results.</p>
+    <p><strong>Tools:</strong></p>
+    <p>Python/ENVI/MATLAB, with instructions that can be shared between UTEP and UACH students. Estimated time: one 3-hour session.</p>
+    
+  </div>
+
+
+  <div class="lab-card">
+
+    <h2>Laboratory 4: Calculation of Reflectance Imagery from Hyperspectral Data Cubes</h2>
+
+    <p>
+      Objective: Students calculate reflectance values of hyperspectral imagery, and investigate spectral properties of
+      the vegetation and the soil.
+    </p>
+
+    <p><strong>Activities:</strong></p>
+    <p>1. Download a hyperspectral scene (0.2 mm/pixel, free this Website).</p>
+    <p>2. Identify the following hyperspectral data cubes on the data repository: (a) scene cube, (b) the bright field, and (c)
+          dark field, and download them into your computer.</p>
     <p>3. Calculate a hyperspectral reflectance cube for each scene using the reflectance formula.</p>
-    <p>4. Inspect vegetation and soil pxels and discuss spectral similarityies and differences between them.  Calculate vegetation indices and discuss similarities and differences between them.</p>
+    <p>4. Inspect vegetation and soil pxels and discuss spectral similarityies and differences between them.  Calculate vegetation
+          indices and discuss similarities and differences between them.</p>
     
     <p><strong>Deliverables:</strong></p>
-    <p>Reflectance spectra of several point accross the hyperspectral cube, and NDVI values accross the image. Write a short report on the findings.</p>
+    <p>Reflectance spectra of several point accross the hyperspectral cube, and NDVI values accross the image. Write a short report
+       on the findings.</p>
     <p><strong>Tools:</strong></p>
-    <p>Scene, white, and black hypercubes. Python/ENVI/MATLAB, with instructions that can be shared between UTEP and UACH students. Estimated time: one 3-hour session.</p>
+    <p>Scene, white, and black hypercubes. Python/ENVI/MATLAB, with instructions that can be shared between UTEP and UACH students.
+       Estimated time: one 3-hour session.</p>
     
   </div>
 
