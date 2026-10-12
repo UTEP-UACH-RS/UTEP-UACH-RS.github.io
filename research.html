@@ -127,7 +127,7 @@
     vegetaion, soil, and other meterials within a very small area.  A hyperspectral sensor measures reflected energy
     in many narrow continuous wavelneght bands. These measurements provide data for calculating several vegetation
     indices, including the NDVI, and can be used to investigate plant vigor at the individual plant level. The
-    thermal sensor measures vegetation and ground temperature and can is also used to measure vegetation status. 
+    thermal sensor measures vegetation temperature and can also be used to measure vegetation status. 
   </p>
 
   <figure class="research-figure">
@@ -143,7 +143,8 @@
   <h3>Hyperspectral Image Processing Results</h3>
 
   <p>
-    The hyperspectral imagery was processed to calculate the reflectance and NDVI.
+    The hyperspectral imagery was processed using ENVI Classic 5.6 to calculate the reflectance values using white, dark, and scene
+    cubes.  The spectrum shown on the upper right of the RGB image is the spectrum of a single alfalfa leaf. The NDVI map was calculated using the the closest bands to 650 nm and the 750 nm.
   </p>
 
   <div class="image-comparison">
@@ -153,7 +154,7 @@
            alt="Original hyperspectral RGB image of the study area">
 
       <figcaption>
-        (a) Hyperspectral RGB image and spectrum of alfalfa plant.
+        (a) Hyperspectral RGB image and spectrum of alfalfa plant (R:~650nm, G:~550nm, B:~450nm).
       </figcaption>
     </figure>
 <!--
