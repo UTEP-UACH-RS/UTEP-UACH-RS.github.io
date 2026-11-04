@@ -1,172 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Remote Sensing Laboratories | RS & STEM Education</title>
-
+  <title>Remote Sensing Laboratories | RS &amp; STEM Education</title>
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .lab-card { margin: 1.5rem 0; padding: 1.4rem; }
+    .lab-card h2 { margin-top: 0; }
+    .lab-card li { margin-bottom: .7rem; line-height: 1.6; }
+    .lab-card .lab-meta { margin-top: 1rem; }
+    .lab-card .equation { overflow-x: auto; padding: .4rem 0; }
+  </style>
 </head>
-
 <body>
+<header><div class="nav"><div class="brand">RS &amp; STEM Education</div>
+<nav aria-label="Primary navigation">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="education.html">Education</a><a href="study-area.html">Study Area</a><a href="field-work.html">Field Work</a><a href="team.html">Team</a><a href="publications.html">Publications</a><a href="contact.html">Contact</a>
+</nav></div></header>
+<main><section class="education-section">
+<h1>Remote Sensing Laboratories</h1>
+<p>These laboratory modules are being developed through the UTEP–UACH collaboration to provide upper-level undergraduate and first-year graduate students with practical experience in remote sensing and image processing for agricultural monitoring. Using observations from Mesilla Park, New Mexico, students will investigate sensor characteristics, spatial and spectral resolution, vegetation indices, reflectance calibration, and image classification. The modules have not yet been implemented with students and may be offered independently or as a sequence.</p>
 
-<header>
-  <div class="nav">
+<div class="lab-card" id="lab1">
+<h2>Laboratory 1: Comparison of Satellite Spatial Resolutions for Agricultural Monitoring</h2>
+<p><strong>Objective:</strong> Compare satellite imagery at different spatial resolutions and investigate how resolution affects vegetation-index maps and their interpretation.</p>
+<h3>Activities</h3><ol>
+<li>Obtain Sentinel-2 Level-2A surface reflectance imagery (10 m/pixel for red and NIR bands) and PlanetScope surface reflectance imagery (approximately 3 m/pixel) of the same Mesilla Park site, acquired on dates as close as possible. Record acquisition dates and check for clouds.</li>
+<li>Identify the red and near-infrared (NIR) bands and compare their spectral characteristics. Align the images to a common geographic reference and select the same study area.</li>
+<li>Calculate the Normalized Difference Vegetation Index (NDVI) for both datasets:<div class="equation">\[\mathrm{NDVI}=\frac{\mathrm{NIR}-\mathrm{Red}}{\mathrm{NIR}+\mathrm{Red}}\]</div></li>
+<li>Display both NDVI maps with the same geographic extent and color scale. Examine field boundaries, vegetation patterns, and exposed soil.</li>
+<li>For matching regions of interest (ROIs), calculate mean NDVI and standard deviation. Compare the results and explain possible differences.</li>
+<li>Discuss the influence of spatial resolution, spectral response, and acquisition date, as well as the trade-offs between freely available and commercial imagery.</li>
+</ol>
+<p><strong>Deliverables:</strong> Two comparable NDVI maps; a table of sensor characteristics and ROI statistics; a short report interpreting differences and limitations.</p>
+<p class="lab-meta"><strong>Tools:</strong> Copernicus Browser, Planet Explorer (subject to data access), Python/Google Colab, ENVI, or MATLAB.<br><strong>Estimated time:</strong> One 3-hour session using prepared datasets.</p>
+</div>
 
-    <div class="brand">
-      RS & STEM Education
-    </div>
+<div class="lab-card" id="lab2">
+<h2>Laboratory 2: Vegetation and Soil Monitoring Using High-Resolution NAIP Imagery</h2>
+<p><strong>Objective:</strong> Use high-resolution NAIP aerial imagery to distinguish vegetation and exposed soil and compare its capabilities with satellite imagery.</p>
+<h3>Activities</h3><ol>
+<li>Obtain NAIP imagery of agricultural fields near the SunGro facility in Mesilla Park. Record the acquisition date, pixel size, and available bands.</li>
+<li>Inspect the imagery and locate crops, trees, exposed soil, irrigation structures, and field boundaries. Compare visible detail with Sentinel-2 imagery.</li>
+<li>For four-band NAIP imagery with a near-infrared band, calculate NDVI. For RGB-only imagery, calculate an appropriate visible-band index such as Excess Green (ExG):<div class="equation">\[\mathrm{ExG}=2G-R-B\]</div>Use appropriately scaled RGB values and document the scaling.</li>
+<li>Create vegetation-index maps and identify representative vegetation and soil ROIs. Calculate summary statistics.</li>
+<li>Compare NAIP and Sentinel-2 maps over the same area, noting that different acquisition dates and spectral bands can affect the comparison.</li>
+<li>Explain the benefits and limitations of high-resolution aerial imagery for mapping crop rows, individual trees, field edges, and mixed vegetation–soil pixels.</li>
+</ol>
+<p><strong>Deliverables:</strong> NAIP vegetation-index map; comparison with satellite imagery; ROI statistics table; short interpretation report.</p>
+<p class="lab-meta"><strong>Tools:</strong> USGS EarthExplorer or another NAIP data portal; Python/Google Colab, ENVI, or MATLAB.<br><strong>Estimated time:</strong> One 3-hour session using prepared datasets.</p>
+</div>
 
-    <nav aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="education.html">Education</a>
-      <a href="study-area.html">Study Area</a>
-      <a href="field-work.html">Field Work</a>
-      <a href="team.html">Team</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<div class="lab-card" id="lab3">
+<h2>Laboratory 3: Reflectance Calibration and Spectral Analysis of Hyperspectral Imagery</h2>
+<p><strong>Objective:</strong> Convert hyperspectral scene measurements into reflectance and investigate spectral differences between vegetation and soil.</p>
+<h3>Activities</h3><ol>
+<li>Obtain the hyperspectral scene cube and associated white-reference and dark-reference measurements collected for the Mesilla Park project, when made available in the project repository.</li>
+<li>Inspect cube dimensions, wavelength range, number of bands, and image content. Display selected bands to locate vegetation and soil.</li>
+<li>Calculate a reflectance cube using compatible scene and reference measurements:<div class="equation">\[R(x,y,\lambda)=\frac{I(x,y,\lambda)-D(x,y,\lambda)}{W(x,y,\lambda)-D(x,y,\lambda)}R_{\mathrm{ref}}(\lambda)\]</div>Here, \(I\) is the scene measurement, \(D\) is the dark reference, \(W\) is the white reference, and \(R_{\mathrm{ref}}\) is the known reference-target reflectance. Avoid division by zero and flag invalid bands or pixels.</li>
+<li>Select representative pixels or ROIs from vegetation and exposed soil. Plot reflectance against wavelength.</li>
+<li>Identify wavelengths that help distinguish vegetation and soil and explain the observed differences.</li>
+<li>Calculate an index supported by the sensor's spectral coverage: NDVI only if NIR and red wavelengths are available; otherwise use an appropriate visible-band measure.</li>
+<li>Discuss the importance of reference measurements, calibration, and spectral resolution.</li>
+</ol>
+<p><strong>Deliverables:</strong> Calibrated reflectance cube; vegetation and soil reflectance plots; selected band or index maps; short calibration and interpretation report.</p>
+<p class="lab-meta"><strong>Tools:</strong> Scene, white-reference, and dark-reference hyperspectral datasets; Python/Google Colab, ENVI, or MATLAB.<br><strong>Estimated time:</strong> One 3-hour session using prepared datasets.</p>
+</div>
 
-  </div>
-</header>
-
-
-<main>
-
-<section class="education-section">
-
-  <h1>Remote Sensing Laboratories</h1>
-
-  <p>
-    These laboratory activities are being developed as part of the UTEP–UACH collaboration to provide students with
-    hands-on experience in remote sensing and digital image processing for agricultural monitoring. The laboratories
-    use satellite, aerial, and ground-based observations from agricultural fields in Mesilla Park, New Mexico.
-    Students will investigate how spatial and spectral resolution, sensor characteristics, and image-processing
-    techniques influence the interpretation of vegetation and soil conditions.   
-  </p>
-
-
-  <div class="lab-card">
-
-    <h2>Laboratory 1: Comparison of Satellite Resolutions for Crop Monitoring</h2>
-
-    <p>
-      Objective: Students compare vegetation indices from two satellites with different spatial resolutions over the
-      same agricultural site and evaluate how resolution affects what can be observed.
-    </p>
-
-    <p><strong>Activities:</strong></p>
-    <p>1. Download a Sentinel-2 L2A scene (10 m/pixel, free via Copernicus) and a PlanetScope Surface Reflectance scene (3 m/pixel) of
-          the same site from dates as close together as possible.</p>
-    <p>2. Identify the Red and Near Infra Red (NIR) bands in each product, noting that each sensor stores its bands in a different
-          order, and calculate Normalized Difference Vegetation Index (NDVI) for low- and higher-spatial resolution images.</p>
-    <p>3. Produce side-by-side NDVI maps with legends and compare the mean NDVI and the level of field detail visible in each.</p>
-    <p>4. Discuss the trade-offs between free, coarser imagery and commercial, finer imagery, and how each would compare with a
-          ground-based image collected at the same site.</p>
-    
-    <p><strong>Deliverables:</strong></p>
-    <p>Side-by-side NDVI maps, a comparison table of NDVI statistics, and a short report on the trade-offs.</p>
-    <p><strong>Tools:</strong></p>
-    <p>Copernicus Browser, Planet Explorer, and Python (rasterio, numpy, matplotlib), with instructions that
-       can be shared between UTEP and UACH students. Estimated time: one 3-hour session.</p>
-
-  </div>
-  
-  <div class="lab-card">
-
-    <h2>Laboratory 2: Crop and Soil Monitoring with NAIP Imagery</h2>
-
-    <p>
-      Objective: Students analyze spectrum of crops and soil and calculate vegetation indices from National Agricultural
-      Imagery Program (NAIP) imagery (0.6 m/pixel) and compare to satellite imagery.  Students assess how resolution
-      affects crop and soil areas.
-    </p>
-
-    <p><strong>Activities:</strong></p>
-    <p>1. Download a NAIP scene (0.6m /pixel, free via USGS EarthExplorer) of sites of interest around Sun Gro Facility,
-          Mesilla Park, NM.</p>
-    <p>2. Identify all the bands available, noting that these may be different from Sentinel 2 bands.  Calculate
-          vegetation indices for these higher-spatial resolution images.</p>
-    <p>3. Produce side-by-side vegetation maps with legends and compare the mean values at the level of field detail
-          visible in each of them.</p>
-    <p>4. Discuss the trade-offs between from NAIP and Sentinel imagery, and how each would compare with a
-          ground-based image collected at the same site.</p>
-    
-    <p><strong>Deliverables:</strong></p>
-    <p>Side-by-side vegetation maps, a comparison table of statistics, and a short report on the trade-offs.</p>
-    <p><strong>Tools:</strong></p>
-    <p>USGS EarthExplorer, and Python/ENVI/MATLAB, with instructions that can be shared between UTEP
-       and UACH students. Estimated time: one 3-hour session.</p>    
-    
-  </div>
-
-
-  <div class="lab-card">
-
-    <h2>Laboratory 3: Calculation of Reflectance Imagery from Hyperspectral Data Cubes</h2>
-
-    <p>
-      Objective: Students calculate reflectance values of hyperspectral imagery, and investigate spectral properties of
-      the vegetation and the soil.
-    </p>
-
-    <p><strong>Activities:</strong></p>
-    <p>1. Download a hyperspectral scene (0.2 mm/pixel, free this Website).</p>
-    <p>2. Identify the following hyperspectral data cubes on the data repository: (a) scene cube, (b) the bright field, and (c)
-          dark field, and download them into your computer.</p>
-    <p>3. Calculate a hyperspectral reflectance cube for each scene using the reflectance formula.</p>
-    <p>4. Inspect vegetation and soil pxels and discuss spectral similarityies and differences between them.  Calculate vegetation
-          indices and discuss similarities and differences between them.</p>
-    
-    <p><strong>Deliverables:</strong></p>
-    <p>Reflectance spectra of several point accross the hyperspectral cube, and NDVI values accross the image. Write a short report
-       on the findings.</p>
-    <p><strong>Tools:</strong></p>
-    <p>Scene, white, and black hypercubes. Python/ENVI/MATLAB, with instructions that can be shared between UTEP and UACH students.
-       Estimated time: one 3-hour session.</p>
-    
-  </div>
-
-
- <div class="lab-card">
-
-    <h2>Laboratory 4: Classification of satellite multispectra; aerial multipectral; and hyperspectral imagery.</h2>
-
-    <p>
-      Objective: Students will use multispectral (satellite and aerial imagery) and hyperspectral to explore the effects
-      of classification at the plot and plant levels.
-    </p>
-
-    <p><strong>Activities:</strong></p>
-    <p>1. Download a multispectral satellite (Sentinel2 3 m/pixel or 10 m/pixel), aerial (0.6 m/pixel),
-          and a hyperspectral scene (0.2 mm/pixel) and identify the available bands.</p>
-    <p>2. Calculate vegetation indices and determine which ones provide distinct information in each case.</p>
-    <p>3. Use selected spectral bands and/or vegetation indices as input to the K-means clustering algorithms and produce
-          vegetation/soil maps.</p>
-    <p>4. Test different number of clusters and determine which provides enough detail to distinguish vegetation conditions
-          without making the map difficult to interpret.</p>
-    <p>5. Compare the resulting maps and discuss which cluster settings are most useful for separating vegetaion, soil, and 
-          differences within vegetation.</p>
-
-    <p><strong>Deliverables:</strong></p>
-    <p>Vegetation-index maps and comparisons describing which bands, indices, and number of clusters provide the clearest results.</p>
-    <p><strong>Tools:</strong></p>
-    <p>Python/ENVI/MATLAB, with instructions that can be shared between UTEP and UACH students. Estimated time: one 3-hour session.</p>
-    
-  </div>
-
-  
-  <p>
-    <a href="education.html">&larr; Return to Education</a>
-  </p>
-
-</section>
-
-</main>
-
-</body>
-</html>
+<div class="lab-card" id="lab4">
+<h2>Laboratory 4: Classification of Multispectral and Hyperspectral Imagery for Agricultural Monitoring</h2>
+<p><strong>Objective:</strong> Apply unsupervised classification to agricultural imagery and investigate the effects of spectral inputs, spatial resolution, and number of clusters.</p>
+<h3>Activities</h3><ol>
+<li>Obtain prepared datasets from Sentinel-2 (10 m/pixel for selected bands) or PlanetScope (approximately 3 m/pixel), NAIP aerial imagery, and the project hyperspectral observations. Record the bands and spatial resolution available for each.</li>
+<li>Examine the images and select relevant spectral bands or vegetation indices for separating vegetation and exposed soil.</li>
+<li>Calculate appropriate vegetation indices, such as NDVI when red and NIR are present or ExG for RGB imagery.</li>
+<li>Apply K-means clustering to selected bands and/or indices, starting with three clusters. Scale features appropriately before clustering.</li>
+<li>Repeat with different cluster counts, such as 3, 5, and 7. Compare the resulting maps and the interpretability of the clusters.</li>
+<li>Examine original imagery and cluster spectral characteristics before assigning descriptive labels. Note that K-means cluster numbers do not automatically correspond to physical land-cover classes.</li>
+<li>Compare classification results across the available datasets and discuss differences caused by spatial resolution and spectral content.</li>
+<li>Where reference observations exist, compare the clusters with known vegetation and soil areas; otherwise describe the evaluation as qualitative.</li>
+</ol>
+<p><strong>Deliverables:</strong> Vegetation-index and K-means maps; table of input features and cluster settings; short report on interpretation and limitations.</p>
+<p class="lab-meta"><strong>Tools:</strong> Python/Google Colab, ENVI, or MATLAB.<br><strong>Estimated time:</strong> One 3-hour session using prepared datasets.</p>
+</div>
+<p><a href="education.html">&larr; Return to Education</a></p>
+</section></main>
+</body></html>
