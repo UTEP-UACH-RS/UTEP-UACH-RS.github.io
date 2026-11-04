@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Remote Sensing Case Studies | RS & STEM Education</title>
-
+  <meta name="description" content="Proposed agricultural remote sensing case studies developed through the UTEP–UACH collaboration.">
+  <title>Remote Sensing Case Studies | RS &amp; STEM Education</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .case-study { margin: 2rem 0; padding: 1.5rem; border: 1px solid #d9e0e5; border-radius: 10px; }
+    .case-study img { display: block; width: 100%; max-width: 650px; height: auto; margin: 1rem auto .4rem; border-radius: 6px; }
+    .case-study figure { margin: 1rem 0; }
+    .case-study figcaption { text-align: center; font-size: .9rem; color: #555; }
+    .case-study li { margin-bottom: .65rem; }
+    .case-study h3 { margin-top: 1.4rem; }
+    .case-study .meta { background: #f4f7f9; padding: .85rem 1rem; border-radius: 6px; }
+    .case-study a { overflow-wrap: anywhere; }
+    @media (max-width: 600px) { .case-study { padding: 1rem; } }
+  </style>
 </head>
-
 <body>
-
 <header>
   <div class="nav">
-
-    <div class="brand">
-      RS & STEM Education
-    </div>
-
+    <div class="brand">RS &amp; STEM Education</div>
     <nav aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -30,88 +33,85 @@
       <a href="publications.html">Publications</a>
       <a href="contact.html">Contact</a>
     </nav>
-
   </div>
 </header>
-
-
 <main>
-
 <section class="education-section">
-
   <h1>Remote Sensing Case Studies</h1>
+  <p>These case studies are being developed through the collaboration between the University of Texas at El Paso (UTEP) and the Universidad Autónoma de Chihuahua (UACH). They will provide opportunities for students to apply remote sensing and image-processing concepts to agricultural monitoring problems using observations from the Mesilla Park, New Mexico, study area.</p>
+  <p>Unlike the <a href="laboratories.html">instructional laboratories</a>, which introduce specific processing techniques, these proposed case studies emphasize selecting appropriate observations, interpreting results, evaluating limitations, and communicating conclusions. They have not yet been implemented with students.</p>
 
-  <p>
-    The following case studies provide opportunities for students to apply remote-sensing concepts
-    and image-processing techniques to agricultural and environmental problems.
-  </p>
-
-  <div class="lab-card">
-
-    <h2>Case Study 1: Agricultural Field Analysis Using Very High Altitude Imagery - Low Spatial and Spectral Resolution</h2>
-
-    <figure class="case-study-figure">
-      <img src="images/sentinel2.jpg"
-          alt="Illustration of the Sentinel-2 satellite">
-      <figcaption>
-        Sentinel-2 multispectral satellite imaging (credits: Sentinel Online).
-      </figcaption>
+  <article class="case-study" id="case-study-1">
+    <h2>Case Study 1: Agricultural Field Monitoring Using Multispectral Satellite Imagery</h2>
+    <figure>
+      <img src="images/sentinel2.jpg" alt="Illustration of a Sentinel-2 satellite used for multispectral Earth observation" loading="lazy">
+      <figcaption>Sentinel-2 multispectral satellite imaging. Image credit: Sentinel Online.</figcaption>
     </figure>
+    <h3>Problem and objective</h3>
+    <p>How do vegetation conditions vary across selected agricultural fields, and what can be determined from satellite observations? Students will investigate spatial variations in vegetation using Sentinel-2 Level-2A surface reflectance imagery and consider the limitations of moderate-spatial-resolution measurements.</p>
+    <h3>Proposed activities</h3>
+    <ol>
+      <li>Select agricultural fields in the Mesilla Park study area and obtain a suitable cloud-free Sentinel-2 Level-2A scene. Record the acquisition date and relevant image characteristics.</li>
+      <li>Identify the red and near-infrared bands and calculate the Normalized Difference Vegetation Index (NDVI) for the selected fields.</li>
+      <li>Prepare an NDVI map with a legend and identify regions showing different vegetation-index values.</li>
+      <li>Calculate summary statistics for selected fields or regions of interest and compare their spatial patterns.</li>
+      <li>Interpret the observed differences in the context of vegetation coverage and field conditions. Discuss alternative explanations, including exposed soil, mixed pixels, crop differences, and acquisition timing.</li>
+      <li>Explain what additional field observations or imagery would be needed to support conclusions about crop condition or vegetation stress.</li>
+    </ol>
+    <h3>Expected deliverables</h3>
+    <p>An NDVI map, a field-level comparison table, and a short technical report explaining the observed patterns, possible interpretations, and limitations of the analysis.</p>
+    <p class="meta"><strong>Suggested tools:</strong> Copernicus Browser, Python (Google Colab), ENVI, or MATLAB.<br><strong>Data source:</strong> Sentinel-2 Level-2A imagery (10 m/pixel for red and NIR bands).</p>
+  </article>
 
-    <ul><li>
-      Analyze Sentinel-2 multispectral imagery to investigate vegetation conditions using vegetation indices within selected agricultural fields.
-    </li></ul>
-
-  </div>
-
-
-  <div class="lab-card">
-
-    <h2>Case Study 2: Agricultural Field Analysis Using Low Altitude Imagery - High Spatial and Low Spectral Resolution</h2>
-
-    <figure class="case-study-figure">
-      <img src="images/naip.jpg"
-          alt="Illustration of the NAIP">
-      <figcaption>
-        National Agricultural Imagery Program (credits: EOS Data Analytics).
-      </figcaption>
+  <article class="case-study" id="case-study-2">
+    <h2>Case Study 2: Agricultural Field Monitoring Using High-Resolution Aerial Imagery</h2>
+    <figure>
+      <img src="images/naip.jpg" alt="Illustration representing aerial imagery acquired through the National Agriculture Imagery Program" loading="lazy">
+      <figcaption>National Agriculture Imagery Program (NAIP). Image credit: EOS Data Analytics.</figcaption>
     </figure>
- 
-   <ul><li>
-      Analyze NAIP aerial imagery and investigate to investigate vegetation conditions using vegetation indices in selected agricultural fields.
-   </li></ul>
-   
-  </div>
+    <h3>Problem and objective</h3>
+    <p>How does higher spatial resolution improve the identification of vegetation and exposed soil within agricultural fields? Students will use NAIP aerial imagery to examine field boundaries, crop patterns, tree canopies, and areas of exposed soil, and compare their observations with satellite imagery where suitable dates are available.</p>
+    <h3>Proposed activities</h3>
+    <ol>
+      <li>Obtain NAIP imagery covering selected agricultural fields near the SunGro facility in Mesilla Park. Record the acquisition date, pixel size, and available bands.</li>
+      <li>Identify representative areas of crops, trees, exposed soil, and other visible agricultural features.</li>
+      <li>Calculate NDVI if red and near-infrared bands are available, or an appropriate visible-band vegetation index such as Excess Green (ExG) if only RGB data are available.</li>
+      <li>Generate a vegetation-index map and identify areas of vegetation and exposed soil. Estimate vegetation coverage in selected regions using a documented classification or thresholding approach.</li>
+      <li>Compare the NAIP results with Sentinel-2 observations, when acquisition dates and band characteristics permit a meaningful comparison. Examine differences in field boundaries, crop rows, and individual tree canopies.</li>
+      <li>Discuss how image date, spatial resolution, and spectral band availability influence the interpretation of agricultural conditions.</li>
+    </ol>
+    <h3>Expected deliverables</h3>
+    <p>A high-resolution vegetation map, estimated vegetation coverage for selected areas, a comparison with satellite observations, and a short technical report explaining the added detail and remaining limitations.</p>
+    <p class="meta"><strong>Suggested tools:</strong> USGS EarthExplorer, Python (Google Colab), ENVI, or MATLAB.<br><strong>Data source:</strong> NAIP aerial imagery (spatial resolution and band availability depend on the acquisition).</p>
+  </article>
 
-  
-  <div class="lab-card">
-
-    <h2>Case Study 3: Agricultural Field Analysis Using ground-level Imagery - Very High Spatial and Spectral Resolution</h2>
-
-    <figure class="case-study-figure">
-      <img src="images/hyperspectral.jpg"
-          alt="Illustration of the hyperspectral">
-      <figcaption>
-        Surface Optics Corporation hyperspectral camera.
-      </figcaption>
+  <article class="case-study" id="case-study-3">
+    <h2>Case Study 3: Spectral Characterization of Vegetation and Soil Using Ground-Based Hyperspectral Imagery</h2>
+    <figure>
+      <img src="images/hyperspectral.jpg" alt="Surface Optics Corporation hyperspectral camera used for ground-based spectral imaging" loading="lazy">
+      <figcaption>Surface Optics Corporation hyperspectral camera.</figcaption>
     </figure>
- 
-   <ul><li>
-       Analyze hyperspectral imagery and investigate to investigate vegetation conditions using vegetation indices in selected agricultural fields.
-   </li></ul>
+    <h3>Problem and objective</h3>
+    <p>Can vegetation and exposed soil be distinguished using their detailed spectral reflectance characteristics? Students will analyze ground-based hyperspectral observations acquired during the field campaigns and investigate how spectral information can support agricultural material identification.</p>
+    <h3>Proposed activities</h3>
+    <ol>
+      <li>Obtain a prepared hyperspectral scene cube and corresponding white-reference and dark-reference measurements from the project dataset.</li>
+      <li>Review the sensor's wavelength range and spectral sampling, and inspect selected bands to locate vegetation and exposed-soil regions.</li>
+      <li>Use the reference measurements to convert the scene data into reflectance, following the calibration procedure introduced in the hyperspectral laboratory.</li>
+      <li>Extract and plot reflectance spectra from representative vegetation and soil regions of interest.</li>
+      <li>Identify wavelength regions where the materials show distinct spectral responses. Calculate appropriate indices or band ratios supported by the available wavelength range.</li>
+      <li>Evaluate whether the observed spectral differences are sufficient to distinguish vegetation and soil in the selected scene. Discuss illumination, calibration, sample variability, and the limitations of the measurements.</li>
+      <li>Explain how ground-based spectral observations may complement satellite or aerial imagery, without assuming that measurements at different scales are directly interchangeable.</li>
+    </ol>
+    <h3>Expected deliverables</h3>
+    <p>Selected reflectance images, vegetation and soil reflectance plots, a comparison of spectral features, and a short technical report describing the evidence supporting material discrimination and the limitations of the analysis.</p>
+    <p class="meta"><strong>Suggested tools:</strong> Project hyperspectral datasets, Python (Google Colab), ENVI, or MATLAB.<br><strong>Data source:</strong> Ground-based hyperspectral observations from the Mesilla Park field campaigns. Spatial resolution depends on the imaging setup and working distance.</p>
+  </article>
 
-    
-  </div>
-
-
-  <p>
-    <a href="education.html">&larr; Return to Education</a>
-  </p>
-
-
+  <h2>Connecting the Case Studies to the Laboratories</h2>
+  <p>The proposed case studies build on skills developed in the <a href="laboratories.html">Remote Sensing Laboratories</a>, including vegetation-index calculations, spectral reflectance calibration, spatial-resolution comparisons, and image classification. In the case studies, students will use those skills to address specific agricultural monitoring questions and evaluate the evidence and limitations of their conclusions.</p>
+  <p><a href="education.html">&larr; Return to Education</a></p>
 </section>
-
 </main>
-
 </body>
 </html>
